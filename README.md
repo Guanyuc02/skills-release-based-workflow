@@ -16,54 +16,46 @@ _Create a release based workflow that is built on the foundations of the GitHub 
 </header>
 
 <!--
-  <<< Author notes: Course start >>>
-  Include start button, a note about Actions minutes,
-  and tell the learner why they should take the course.
+  <<< Author notes: Step 5 >>>
+  Start this step by acknowledging the previous step.
+  Define terms and link to docs.github.com.
 -->
 
-## Welcome
+## Step 5: Finalize the release
 
-Create a release based workflow that is built on the foundations of the [GitHub flow](https://guides.github.com/introduction/flow/). When your team uses a release-based workflow, GitHub makes it easy to collaborate with deployable iterations of your project that you can package and make available for a wider audience to download and use.
+_Awesome work on the release notes :+1:_
 
-GitHub releases allow your team to package and provide software to your users based on a specific point in the history of your project.
+### Finalizing releases
 
-- **Who is this for**: Developers, DevOps Engineers, IT Operations, managers, and teams.
-- **What you'll learn**: How to follow a release-based workflow.
-- **What you'll build**: You will create tags, releases, and release notes.
-- **Prerequisites**: If you need to learn about branches, commits, and pull requests, take [Introduction to GitHub](https://github.com/skills/introduction-to-github) first.
-- **How long**: This course takes less than 1 hour to complete.
+It's important to be aware of the information what will be visible in that release. In the pre-release, the version and commit messages are visible.
 
-In this course, you will:
+![image](https://user-images.githubusercontent.com/13326548/47883578-bdba7780-ddea-11e8-84b8-563e12f02ca6.png)
 
-1. Create a beta release
-2. Add a feature to a release
-3. Open a release pull request
-4. Add release notes and merge
-5. Finalize a release
-6. Commit a hotfix
-7. Create a hotfix release
+### Semantic versioning
 
-### How to start this course
+Semantic versioning is a formal convention for specifying compatibility. It uses a three-part version number: **major version**; **minor version**; and **patch**. Version numbers convey meaning about the underlying code and what has been modified. For example, versioning could be handled as follows:
 
-<!-- For start course, run in JavaScript:
-'https://github.com/new?' + new URLSearchParams({
-  template_owner: 'skills',
-  template_name: 'release-based-workflow',
-  owner: '@me',
-  name: 'skills-release-based-workflow',
-  description: 'My clone repository',
-  visibility: 'public',
-}).toString()
--->
+| Code status                     | Stage         | Rule                                                                   | Example version |
+| ------------------------------- | ------------- | ---------------------------------------------------------------------- | --------------- |
+| First release                   | New product   | Start with 1.0.0                                                       | 1.0.0           |
+| Backward compatible fix         | Patch release | Increment the third digit                                              | 1.0.1           |
+| Backward compatible new feature | Minor release | Increment the middle digit and reset the last digit to zero            | 1.1.0           |
+| Breaking updates                | Major release | Increment the first digit and reset the middle and last digits to zero | 2.0.0           |
 
-[![start-course](https://user-images.githubusercontent.com/1221423/235727646-4a590299-ffe5-480d-8cd5-8194ea184546.svg)](https://github.com/new?template_owner=skills&template_name=release-based-workflow&owner=%40me&name=skills-release-based-workflow&description=My+clone+repository&visibility=public)
+Check out this article on [Semantic versioning](https://semver.org/) to learn more.
 
-1. Right-click **Start course** and open the link in a new tab.
-2. In the new tab, most of the prompts will automatically fill in for you.
-   - For owner, choose your personal account or an organization to host the repository.
-   - We recommend creating a public repository, as private repositories will [use Actions minutes](https://docs.github.com/en/billing/managing-billing-for-github-actions/about-billing-for-github-actions).
-   - Scroll down and click the **Create repository** button at the bottom of the form.
-3. After your new repository is created, wait about 20 seconds, then refresh the page. Follow the step-by-step instructions in the new repository's README.
+### Finalize the release
+
+Now let's change our recently automated release from _draft_ to _latest release_.
+
+### :keyboard: Activity: Finalize release
+
+1. In a separate tab, go to the **Releases** page for this repository.
+   - _Tip: To reach this page, click the **Code** tab at the top of your repository. Then, find the navigation bar below the repository description, and click the **Releases** heading link._
+1. Click the **Edit** button next to your draft release.
+1. Ensure the _Target_ branch is set to `main`.
+1. Click **Publish release**.
+1. Wait about 20 seconds then refresh this page (the one you're following instructions from). [GitHub Actions](https://docs.github.com/en/actions) will automatically update to the next step.
 
 <footer>
 
